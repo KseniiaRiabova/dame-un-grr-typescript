@@ -2,7 +2,6 @@ import './style.css';
 
 class DameUnGrrApp {
   private currentStep: number = 0;
-  private isPlaying: boolean = false;
 
   private readonly steps = [
     { text: 'DAME UN GRR', button: 'UN QUÉ? 🤔' },
@@ -164,13 +163,11 @@ class DameUnGrrApp {
     this.elements.youtubeVideo.src = videoUrl;
 
     this.elements.videoContainer.style.display = 'flex';
-    this.isPlaying = true;
   }
 
   private closeVideo(): void {
     this.elements.videoContainer.style.display = 'none';
     this.elements.youtubeVideo.src = '';
-    this.isPlaying = false;
   }
 
   private playAgain(): void {
