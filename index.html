@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dame un Grr - Interactive Meme</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="background">
+        <div class="mountains"></div>
+        <div class="sun"></div>
+      </div>
+
+      <div class="container">
+        <div class="main-text" id="mainText">
+          <h1>DAME UN GRR</h1>
+        </div>
+
+        <div class="interaction-area">
+          <button id="actionButton" class="action-button">UN QUÉ? 🤔</button>
+        </div>
+
+        <div
+          class="loading-indicator"
+          id="loadingIndicator"
+          style="display: none"
+        >
+          <div class="spinner"></div>
+          <p>Video is loading... Please wait! 🎵</p>
+        </div>
+
+        <div class="video-container" id="videoContainer" style="display: none">
+          <iframe
+            id="youtubeVideo"
+            width="560"
+            height="315"
+            src=""
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          >
+          </iframe>
+          <div class="video-controls">
+            <button id="closeVideoButton" class="close-video-button">
+              ❌ Close Video
+            </button>
+            <button id="playAgainButton" class="play-again-button">
+              🔄 Play Again
+            </button>
+          </div>
+        </div>
+
+        <!-- Background music -->
+        <audio id="backgroundMusic" loop>
+          <source src="/audio/background.mp3" type="audio/mpeg" />
+          <source src="/audio/background.wav" type="audio/wav" />
+        </audio>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
